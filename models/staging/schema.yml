@@ -1,0 +1,19 @@
+version: 2
+
+models:
+  - name: st_health_data
+    description: "Staging model for raw health data from OpenFDA"
+    columns:
+      - name: safetyreportid
+        description: "Unique report ID"
+        tests:
+          - not_null
+          - unique
+      - name: drug
+        description: "Drug name"
+        tests:
+          - not_null
+      - name: reaction
+        description: "Reported reaction"
+        tests:
+          - not_null

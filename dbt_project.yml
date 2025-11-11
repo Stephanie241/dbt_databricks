@@ -1,0 +1,19 @@
+name: 'dbt_health_api_databricks'
+version: '1.0'
+config-version: 2
+
+profile: 'demo_project_databricks'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]         # <- point to your seeds folder
+target-path: "target"
+clean-targets: ["target", "dbt_modules"]
+
+seeds:
+  demo_project_databricks:     # your profile name
+    health_data_raw:
+      column_types:
+        patient_id: string
+        drug: string
+        reaction: string
+        ingest_ts: timestamp

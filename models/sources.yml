@@ -1,0 +1,6 @@
+version: 2
+
+sources:
+  - name: dbt
+    tables:
+      - name: health_raw
