@@ -1,0 +1,12 @@
+version: 2
+
+models:
+  - name: health_summary
+    description: "Aggregated summary of health events by drug"
+    columns:
+      - name: patient_drug
+        description: "Drug name reported in event"
+      - name: total_events
+        description: "Number of events per drug"
+        tests:
+          - not_null
