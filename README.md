@@ -162,5 +162,5 @@ OpenFDA API → Python Script → dbt Seed (health_data_raw)
 ## References
 
 - [dbt Documentation](https://docs.getdbt.com/)
-- [Databricks Catalogs & Tables](https://docs.databricks.com/data/data-catalog.html)
+- [Databricks Catalogs & Tables](https://docs.databricks.com/)
 - [OpenFDA API](https://open.fda.gov/apis/)
