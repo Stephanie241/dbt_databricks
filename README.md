@@ -27,13 +27,21 @@ dbt_health_api_databricks/
 │   ├─ marts/
 │   │   └─ health_summary.sql   # Aggregated mart model
 │
-├─ dbt_project.yml
-└─ profiles.yml                 # Databricks connection
+└─ dbt_project.yml             
 ```
 
 ---
 
 ## Setup Instructions
+
+#### Database Connection
+
+The dbt connection settings are stored in your local `profiles.yml` file:
+
+- macOS/Linux: `~/.dbt/profiles.yml`
+- Windows: `C:\Users\<username>\.dbt\profiles.yml`
+
+This file is **not included in the repo** for security reasons. Make sure your `dev` target is correctly configured to point to your Databricks catalog, schema, host, and token.
 
 ### 1. Create Virtual Environment
 
