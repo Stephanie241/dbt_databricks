@@ -9,6 +9,28 @@ This project demonstrates an end-to-end **dbt + Databricks pipeline** that:
 5. Validates data integrity through **dbt schema tests**.  
 ---
 
+## System Design
+
+```mermaid
+flowchart TD
+    A[OpenFDA API] --> B[Python Script: fetch_health_data.py]
+    B --> C[Seed: health_data_raw.csv]
+    C --> D[Staging Model: st_health_data]
+    D --> E[Mart Model: health_summary]
+
+    subgraph DBT Project
+        C
+        D
+        E
+    end
+
+    style A fill:#f9f,stroke:#333,stroke-width:2px
+    style B fill:#bbf,stroke:#333,stroke-width:2px
+    style C fill:#bfb,stroke:#333,stroke-width:2px
+    style D fill:#ffb,stroke:#333,stroke-width:2px
+    style E fill:#fbf,stroke:#333,stroke-width:2px
+```
+
 ## Project Structure
 
 ```
