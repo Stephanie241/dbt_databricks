@@ -2,18 +2,29 @@ version: 2
 
 models:
   - name: st_health_data
-    description: "Staging model for raw health data from OpenFDA"
+    description: "Staging model for raw health data from OpenFDA, cleans and standardizes raw fields before analytics."
     columns:
       - name: safetyreportid
-        description: "Unique report ID"
+        description: "Unique identifier for each safety report."
         tests:
           - not_null
           - unique
+
       - name: drug
-        description: "Drug name"
+        description: "Drug name reported in the safety event."
         tests:
           - not_null
+
       - name: reaction
-        description: "Reported reaction"
+        description: "Reported reaction or adverse effect."
         tests:
           - not_null
+
+      - name: ingest_ts
+        description: "Timestamp of data ingestion from the API source."
+
+      - name: receiver
+        description: "Entity receiving the report."
+
+      - name: duplicate
+        description: "Indicates whether the report is a duplicate record."

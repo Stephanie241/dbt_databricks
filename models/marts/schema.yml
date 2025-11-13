@@ -2,11 +2,17 @@ version: 2
 
 models:
   - name: health_summary
-    description: "Aggregated summary of health events by drug"
+    description: "Aggregated summary of health events by drug, derived from staged data."
     columns:
-      - name: patient_drug
-        description: "Drug name reported in event"
-      - name: total_events
-        description: "Number of events per drug"
+      - name: drug
+        description: "Drug name reported in events."
         tests:
           - not_null
+
+      - name: total_events
+        description: "Number of events per drug."
+        tests:
+          - not_null
+
+      - name: last_ingest
+        description: "Timestamp of the most recent ingestion for each drug."
