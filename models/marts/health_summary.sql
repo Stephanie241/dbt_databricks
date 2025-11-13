@@ -3,17 +3,20 @@
     unique_key = 'drug'
 ) }}
 
-with staged as (
-    select * from {{ ref('st_health_data') }}
+WITH staged AS (
+    SELECT
+        ingest_ts,
+        regexp_extract(drug, 'medicinalproduct\': \'([^\']+)\'', 1) AS medicinalproduct
+    FROM {{ ref('st_health_data') }}
 )
 
-select
-    drug,
-    count(*) as total_events,
-    max(ingest_ts) as last_ingest
-from staged
+SELECT
+    COALESCE(medicinalproduct, 'Unknown') AS drug,
+    COUNT(*) AS total_events,
+    MAX(ingest_ts) AS last_ingest
+FROM staged
 {% if is_incremental() %}
-where ingest_ts > (select max(last_ingest) from {{ this }})
+WHERE ingest_ts > (SELECT MAX(last_ingest) FROM {{ this }})
 {% endif %}
-group by drug
-order by total_events desc
+GROUP BY medicinalproduct
+ORDER BY total_events DESC
