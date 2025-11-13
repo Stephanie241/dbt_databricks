@@ -11,8 +11,12 @@ This project demonstrates an end-to-end **dbt + Databricks pipeline** that:
 
 ## System Design
 
-<img src="https://www.fda.gov/themes/custom/preview/assets/images/gov-fda-new-white.svg" alt="OpenFDA API" width="300" style="display: inline-block; vertical-align: middle;"/>
+<img src="https://www.fda.gov/themes/custom/preview/assets/images/gov-fda-new-white.svg" alt="OpenFDA API" width="200" style="display: inline-block; vertical-align: middle;"/>
+&nbsp;&rarr;&nbsp;
 <img src="https://cdn.cookielaw.org/logos/4a2cde9e-5f84-44b2-bdbb-6a93354d1c72/e1199e19-1935-49fa-a4e2-bf7f9d08cee6/783d7c83-af8c-4032-901b-b3ec48982078/dbt-logo.png" alt="dbt" width="100" style="display: inline-block; vertical-align: middle;"/>
+&nbsp;&rarr;&nbsp;
+<img src="https://miro.medium.com/v2/1*do1ktvGR9Cj6vzFBu_8Irw.png" alt="Databricks" width="120" style="display: inline-block; vertical-align: middle;"/>
+
 
 ```mermaid
 flowchart TD
