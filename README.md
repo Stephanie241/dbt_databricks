@@ -12,7 +12,7 @@ This project demonstrates an end-to-end **dbt + Databricks pipeline** that:
 ## System Design
 
 <div style="display: flex; align-items: center; gap: 10px;">
-  <img src="https://www.fda.gov/themes/custom/preview/assets/images/gov-fda-new-white.svg" alt="OpenFDA API" width="120"/>
+  <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/1/1d/Food_and_Drug_Administration_icon_2016.svg/1000px-Food_and_Drug_Administration_icon_2016.svg.png" alt="OpenFDA API" width="40"/>
   <span style="font-size: 20px;">&rarr;</span>
   <img src="https://cdn.cookielaw.org/logos/4a2cde9e-5f84-44b2-bdbb-6a93354d1c72/e1199e19-1935-49fa-a4e2-bf7f9d08cee6/783d7c83-af8c-4032-901b-b3ec48982078/dbt-logo.png" alt="dbt" width="100"/>
   <span style="font-size: 20px;">&rarr;</span>
